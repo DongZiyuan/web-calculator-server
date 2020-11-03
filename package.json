@@ -1,0 +1,14 @@
+{
+  "name": "web-calculator-server",
+  "version": "1.0.0",
+  "description": "Web Calculator Server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Ziyuan Dong",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
