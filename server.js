@@ -21,6 +21,7 @@ function onConnect(socket) {
 	});
 }
 
-app.use(cors())
+app.use(cors());
+io.origins('*:*');
 io.on('connect', onConnect);
 server.listen(port, () => console.log(`listening on port: ${ port }`));
