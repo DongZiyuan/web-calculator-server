@@ -1,10 +1,9 @@
 const app = require('express')();
 const server = require('http').createServer(app);
+const cors = require('cors');
 const io = require('socket.io')(server);
-
 const port = process.env.PORT || 4001;
 const queue = [];
-io.on('connect', onConnect);
 
 function getTimestamp() {
 	let time = new Date();
@@ -22,4 +21,6 @@ function onConnect(socket) {
 	});
 }
 
+app.use(cors())
+io.on('connect', onConnect);
 server.listen(port, () => console.log(`listening on port: ${ port }`));
